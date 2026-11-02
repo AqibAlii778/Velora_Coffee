@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import SectionHeading from '../components/SectionHeading.jsx'
+import MenuHero from '../components/MenuHero.jsx'
 import ProductCard from '../components/ProductCard.jsx'
 import { usePageMeta } from '../components/useReveal.js'
 import { menu } from '../data/products.js'
@@ -10,9 +10,10 @@ export default function Menu() {
   usePageMeta('Menu', 'Explore Velora’s menu: hot coffee, cold coffee and fresh bakery, made to order.')
   const [cat, setCat] = useState('hot')
   return (
-    <section className="section page-top">
+    <>
+    <MenuHero />
+    <section className="section">
       <div className="container">
-        <SectionHeading kicker="The menu" title="Made slowly, served warm" text="Pick a category. Every drink is built by hand with beans roasted this week." />
         <div className="tabs" role="tablist" aria-label="Menu categories">
           {cats.map(([id, label]) => (
             <button key={id} role="tab" type="button" aria-selected={cat === id} className={cat === id ? 'on' : ''} onClick={() => setCat(id)}>{label}</button>
@@ -23,5 +24,6 @@ export default function Menu() {
         </div>
       </div>
     </section>
+    </>
   )
 }

@@ -1,12 +1,12 @@
 export const fmt = (n) => 'PKR ' + n.toLocaleString('en-US')
 
 export const menu = [
-  { id: 'espresso', cat: 'hot', name: 'Espresso', price: 350, art: 'latte', desc: 'A short, syrupy double shot with dark chocolate depth and a hazelnut crema.' },
-  { id: 'americano', cat: 'hot', name: 'Americano', price: 400, art: 'latte', desc: 'Two shots lengthened with hot water for a clean, bright, easy-drinking cup.' },
+  { id: 'espresso', cat: 'hot', name: 'Espresso', price: 350, art: 'espresso', desc: 'A short, syrupy double shot with dark chocolate depth and a hazelnut crema.' },
+  { id: 'americano', cat: 'hot', name: 'Americano', price: 400, art: 'americano', desc: 'Two shots lengthened with hot water for a clean, bright, easy-drinking cup.' },
   { id: 'latte', cat: 'hot', name: 'Velora Latte', price: 520, art: 'latte', desc: 'Our signature: silky steamed milk poured over a caramel-sweet espresso blend.' },
-  { id: 'mocha', cat: 'hot', name: 'Caramel Mocha', price: 580, art: 'latte', desc: 'Dark cocoa, house caramel and espresso, finished with a soft cream cap.' },
+  { id: 'mocha', cat: 'hot', name: 'Caramel Mocha', price: 580, art: 'mocha', desc: 'Dark cocoa, house caramel and espresso, finished with a soft cream cap.' },
   { id: 'coldbrew', cat: 'cold', name: 'Cold Brew', price: 550, art: 'cold', desc: 'Steeped 18 hours, served over ice. Smooth, low-acid and naturally sweet.' },
-  { id: 'affogato', cat: 'cold', name: 'Affogato', price: 600, art: 'cold', desc: 'Vanilla gelato drowned in a fresh double espresso. Dessert and coffee in one.' },
+  { id: 'affogato', cat: 'cold', name: 'Affogato', price: 600, art: 'affogato', desc: 'Vanilla gelato drowned in a fresh double espresso. Dessert and coffee in one.' },
   { id: 'croissant', cat: 'bakery', name: 'Butter Croissant', price: 380, art: 'pastry', desc: 'Laminated daily with cultured butter. Shatteringly crisp, honeycomb inside.' },
   { id: 'pain', cat: 'bakery', name: 'Pain au Chocolat', price: 450, art: 'pastry', desc: 'Two bars of dark chocolate folded into flaky, golden pastry.' },
   { id: 'cinnamon', cat: 'bakery', name: 'Cinnamon Roll', price: 420, art: 'pastry', desc: 'Soft, spiced and glazed while warm. Best with a flat white.' },

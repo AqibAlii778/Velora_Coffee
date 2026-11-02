@@ -1,5 +1,8 @@
-Drop your own photos here (JPG). The site uses them automatically and falls back to
-built-in illustrations when a file is missing. Names used:
-latte, coldbrew, espresso, americano, mocha, affogato, croissant, pain, cinnamon, cheesecake,
-ethiopia, colombia, brazil, giftbox, trio, subscription, office, hero, farm, roast, barista,
-interior, clifton, dha, gulshan
+Drop real photos (JPG) here with EXACTLY these names. They replace the built-in illustrations automatically.
+Best size: about 1200x1200 (square-ish), under 300KB each.
+
+Menu page:   menu-hero (cup photo at the top), espresso, americano, latte, mocha, coldbrew, affogato,
+             croissant, pain, cinnamon, cheesecake
+Home/Story:  hero, farm, roast, ethiopia, colombia, brazil, interior, giftbox, trio, subscription, office
+Locations:   clifton, dha, gulshan
+Free sources: unsplash.com, pexels.com (search: "latte art", "espresso", "iced coffee", "croissant").

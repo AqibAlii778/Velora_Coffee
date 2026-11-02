@@ -14,6 +14,23 @@ function Bean({ x, y, r, s }) {
   )
 }
 
+
+function cupTop({ rim = C.latte, coffee = C.latte, inner = '#C99468', size = 1, foam = null, drizzle = false, bg = C.peach }) {
+  const k = size
+  return (
+    <>
+      <rect width="400" height="500" fill={bg} />
+      <circle cx="200" cy="250" r={165 * k} fill={C.cream} />
+      <rect x={200 + 112 * k} y="232" width={62 * k} height="36" rx="18" fill={C.cream} stroke={rim} strokeWidth="3" />
+      <circle cx="200" cy="250" r={108 * k} fill={C.cream} stroke={rim} strokeWidth="3" />
+      <circle cx="200" cy="250" r={92 * k} fill={coffee} />
+      <circle cx="200" cy="250" r={76 * k} fill={inner} />
+      {foam}
+      {drizzle && <path d="M130 230 Q165 205 200 235 T270 225 M135 270 Q170 245 205 275 T268 262" fill="none" stroke={C.cream} strokeWidth="5" strokeLinecap="round" opacity=".85" />}
+    </>
+  )
+}
+
 const scenes = {
   latte: (
     <>
@@ -26,6 +43,20 @@ const scenes = {
       <circle cx="200" cy="250" r="76" fill="#C99468" />
       <path d="M200 312 C150 275 150 215 182 205 C196 201 200 214 200 222 C200 214 204 201 218 205 C250 215 250 275 200 312Z" fill={C.cream} />
       <path d="M200 296 C170 270 172 232 190 226 M200 296 C230 270 228 232 210 226" fill="none" stroke={C.latte} strokeWidth="3" opacity=".5" />
+    </>
+  ),
+  espresso: cupTop({ size: 0.72, coffee: C.cocoa, inner: '#4a2a1d', foam: <circle cx="200" cy="250" r="44" fill="none" stroke={C.latte} strokeWidth="6" opacity=".7" /> }),
+  americano: cupTop({ size: 1, coffee: C.cocoa, inner: '#3b1f17', foam: <circle cx="200" cy="250" r="60" fill="none" stroke={C.latte} strokeWidth="3" opacity=".45" /> }),
+  mocha: cupTop({ coffee: C.maroon, inner: '#7a4130', drizzle: true, foam: <circle cx="200" cy="250" r="46" fill={C.cream} opacity=".55" /> }),
+  affogato: (
+    <>
+      <rect width="400" height="500" fill={C.maroon} />
+      <circle cx="200" cy="250" r="160" fill={C.cocoa} opacity=".35" />
+      <circle cx="200" cy="250" r="125" fill={C.cream} />
+      <circle cx="200" cy="250" r="104" fill={C.latte} />
+      <circle cx="200" cy="244" r="62" fill="#fff" />
+      <path d="M150 238 Q175 205 215 228 Q250 245 240 285 Q205 300 165 280Z" fill={C.cocoa} opacity=".75" />
+      <path d="M150 238 Q175 205 215 228" fill="none" stroke={C.latte} strokeWidth="6" strokeLinecap="round" opacity=".8" />
     </>
   ),
   cold: (
